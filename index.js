@@ -1,6 +1,3 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
-
 // index.js is used to setup and configure your bot
 
 // Import required packages
@@ -8,12 +5,10 @@ const path = require('path');
 const restify = require('restify');
 
 // Import required bot services. See https://aka.ms/bot-services to learn more about the different parts of a bot.
-const { BotFrameworkAdapter, MemoryStorage, ConversationState, UserState } = require('botbuilder');
+const { BotFrameworkAdapter, MemoryStorage, ConversationState } = require('botbuilder');
 
-// This bot's main dialog.
-//const { RichCardsBot } = require('./bots/richCardsBot');
-//const { MainDialog } = require('./dialogs/mainDialog');
 const FlickrBot = require('./bots/FlickrBot');
+// This bot's main dialog.
 const FlickrDialog = require('./dialogs/FlickrDialog');
 const ENV_FILE = path.join(__dirname, '.env');
 require('dotenv').config({ path: ENV_FILE });
@@ -35,9 +30,6 @@ adapter.onTurnError = async (context, error) => {
     // Clear out state
     await conversationState.delete(context);
 };
-
-// Define a state store for your bot. See https://aka.ms/about-bot-state to learn more about using MemoryStorage.
-// A bot requires a state store to persist the dialog and user state between messages.
 
 // For local development, in-memory storage is used.
 // CAUTION: The Memory Storage used here is for local bot debugging only. When the bot
