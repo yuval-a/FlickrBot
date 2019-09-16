@@ -43,7 +43,6 @@ class FlickrDialog extends ComponentDialog {
             retryPrompt: "That was not a valid choice...",
             choices: ["More from this author...", "New photos"]
         };
-        await stepContext.ret
         return await stepContext.prompt('whatsNextPrompt', options);
     }
 
