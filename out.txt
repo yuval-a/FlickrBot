@@ -1,0 +1,2245 @@
+
+> using-cards@1.0.0 start C:\dev\bots\FlickrBot
+> node ./index.js
+
+
+restify listening to http://[::]:3978.
+
+Get Bot Framework Emulator: https://aka.ms/botframework-emulator.
+CONVERSATION
+CONVERSATION
+DIALOG RESULTS
+{ status: 'empty' }
+MainDialog.initialStep
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    channelData: { clientActivityID: '15686643735634frdtxzzfxl', messageBack: {} },
+    type: 'message',
+    value: { action: 'author_more', author_id: '93748710@N04' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:06:13.569Z,
+    entities: [
+      {
+        requiresBotState: true,
+        supportsListening: true,
+        supportsTts: true,
+        type: 'ClientCapabilities'
+      }
+    ],
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '6f16bb10-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:06:13.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+DIALOG RESULTS
+{ status: 'empty' }
+MainDialog.initialStep
+onDialog
+TurnContext {
+  _respondedRef: { responded: true },
+  _turnState: Map {
+    Symbol(state) => {
+      state: {
+        DialogState: {
+          dialogStack: [
+            {
+              id: 'FlickrDialog',
+              state: {
+                dialogs: {
+                  dialogStack: [
+                    {
+                      id: 'mainWaterfallDialog',
+                      state: {
+                        options: {},
+                        values: {
+                          instanceId: 'b11f0d13-100b-9249-a382-692f32f0694b'
+                        },
+                        stepIndex: 0
+                      }
+                    },
+                    {
+                      id: 'whatsNextPrompt',
+                      state: {
+                        options: {
+                          prompt: "What's next?",
+                          retryPrompt: 'That was not a valid choice...',
+                          choices: [ 'More from this author...', 'New photos' ]
+                        },
+                        state: {}
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      hash: '{}'
+    }
+  },
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    channelData: { clientActivityID: '15686643735634frdtxzzfxl', messageBack: {} },
+    type: 'message',
+    value: { action: 'author_more', author_id: '93748710@N04' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:06:13.569Z,
+    entities: [
+      {
+        requiresBotState: true,
+        supportsListening: true,
+        supportsTts: true,
+        type: 'ClientCapabilities'
+      }
+    ],
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '6f16bb10-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:06:13.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: '1',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '15686643856112jk9m4sizse' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:06:25.616Z,
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '76451c10-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:06:25.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+MainDialog.choiceStep
+WaterfallStepContext {
+  dialogs: DialogSet {
+    dialogs: {
+      whatsNextPrompt: ChoicePrompt {
+        _telemetryClient: NullTelemetryClient {},
+        id: 'whatsNextPrompt',
+        validator: undefined,
+        style: 1,
+        defaultLocale: undefined
+      },
+      mainWaterfallDialog: WaterfallDialog {
+        _telemetryClient: NullTelemetryClient {},
+        id: 'mainWaterfallDialog',
+        steps: [
+          [Function: bound initialStep] AsyncFunction,
+          [Function: bound choiceStep] AsyncFunction
+        ]
+      }
+    },
+    dialogState: null
+  },
+  context: TurnContext {
+    _respondedRef: { responded: false },
+    _turnState: Map {
+      Symbol(state) => {
+        state: {
+          DialogState: {
+            dialogStack: [
+              {
+                id: 'FlickrDialog',
+                state: {
+                  dialogs: {
+                    dialogStack: [
+                      {
+                        id: 'mainWaterfallDialog',
+                        state: {
+                          options: {},
+                          values: {
+                            instanceId: 'b11f0d13-100b-9249-a382-692f32f0694b'
+                          },
+                          stepIndex: 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          eTag: '1'
+        },
+        hash: `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"b11f0d13-100b-9249-a382-692f32f0694b"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]}}`
+      }
+    },
+    _onSendActivities: [],
+    _onUpdateActivity: [],
+    _onDeleteActivity: [],
+    _adapter: BotFrameworkAdapter {
+      middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+      settings: {
+        appId: '',
+        appPassword: '',
+        channelService: undefined,
+        openIdMetadata: undefined
+      },
+      credentials: MicrosoftAppCredentials {
+        oAuthScope: 'https://api.botframework.com/.default',
+        refreshingToken: null,
+        appId: '',
+        appPassword: '',
+        oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+        tokenCacheKey: '-cache'
+      },
+      credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+      isEmulatingOAuthCards: false,
+      turnError: [AsyncFunction]
+    },
+    _activity: {
+      text: '1',
+      textFormat: 'plain',
+      type: 'message',
+      channelData: { clientActivityID: '15686643856112jk9m4sizse' },
+      channelId: 'emulator',
+      from: {
+        id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+        name: 'User',
+        role: 'user'
+      },
+      locale: 'en-US',
+      timestamp: 2019-09-16T20:06:25.616Z,
+      conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+      id: '76451c10-d8bd-11e9-9d8f-51e00bada37e',
+      localTimestamp: 2019-09-16T20:06:25.000Z,
+      recipient: {
+        id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+        name: 'Bot',
+        role: 'bot'
+      },
+      serviceUrl: 'http://localhost:61243'
+    }
+  },
+  stack: [
+    {
+      id: 'mainWaterfallDialog',
+      state: {
+        options: {},
+        values: { instanceId: 'b11f0d13-100b-9249-a382-692f32f0694b' },
+        stepIndex: 1
+      }
+    }
+  ],
+  _info: {
+    index: 1,
+    options: {},
+    reason: 'endCalled',
+    result: { value: 'More from this author...', index: 0, score: 1 },
+    values: { instanceId: 'b11f0d13-100b-9249-a382-692f32f0694b' },
+    onNext: [AsyncFunction: onNext]
+  },
+  parent: DialogContext {
+    dialogs: DialogSet {
+      dialogs: {
+        FlickrDialog: FlickrDialog {
+          _telemetryClient: NullTelemetryClient {},
+          id: 'FlickrDialog',
+          dialogs: DialogSet {
+            dialogs: {
+              whatsNextPrompt: ChoicePrompt {
+                _telemetryClient: NullTelemetryClient {},
+                id: 'whatsNextPrompt',
+                validator: undefined,
+                style: 1,
+                defaultLocale: undefined
+              },
+              mainWaterfallDialog: WaterfallDialog {
+                _telemetryClient: NullTelemetryClient {},
+                id: 'mainWaterfallDialog',
+                steps: [
+                  [Function: bound initialStep] AsyncFunction,
+                  [Function: bound choiceStep] AsyncFunction
+                ]
+              }
+            },
+            dialogState: null
+          },
+          initialDialogId: 'mainWaterfallDialog'
+        }
+      },
+      dialogState: BotStatePropertyAccessor {
+        state: ConversationState {
+          storage: MemoryStorage {
+            memory: {
+              'emulator/conversations/6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat/': `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"b11f0d13-100b-9249-a382-692f32f0694b"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]},"eTag":"1"}`
+            },
+            etag: 2
+          },
+          storageKey: [Function],
+          stateKey: Symbol(state),
+          namespace: ''
+        },
+        name: 'DialogState',
+        authorId: '93748710@N04'
+      }
+    },
+    context: TurnContext {
+      _respondedRef: { responded: false },
+      _turnState: Map {
+        Symbol(state) => {
+          state: {
+            DialogState: {
+              dialogStack: [
+                {
+                  id: 'FlickrDialog',
+                  state: {
+                    dialogs: {
+                      dialogStack: [
+                        {
+                          id: 'mainWaterfallDialog',
+                          state: {
+                            options: {},
+                            values: {
+                              instanceId: 'b11f0d13-100b-9249-a382-692f32f0694b'
+                            },
+                            stepIndex: 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            eTag: '1'
+          },
+          hash: `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"b11f0d13-100b-9249-a382-692f32f0694b"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]}}`
+        }
+      },
+      _onSendActivities: [],
+      _onUpdateActivity: [],
+      _onDeleteActivity: [],
+      _adapter: BotFrameworkAdapter {
+        middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+        settings: {
+          appId: '',
+          appPassword: '',
+          channelService: undefined,
+          openIdMetadata: undefined
+        },
+        credentials: MicrosoftAppCredentials {
+          oAuthScope: 'https://api.botframework.com/.default',
+          refreshingToken: null,
+          appId: '',
+          appPassword: '',
+          oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+          tokenCacheKey: '-cache'
+        },
+        credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+        isEmulatingOAuthCards: false,
+        turnError: [AsyncFunction]
+      },
+      _activity: {
+        text: '1',
+        textFormat: 'plain',
+        type: 'message',
+        channelData: { clientActivityID: '15686643856112jk9m4sizse' },
+        channelId: 'emulator',
+        from: {
+          id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+          name: 'User',
+          role: 'user'
+        },
+        locale: 'en-US',
+        timestamp: 2019-09-16T20:06:25.616Z,
+        conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+        id: '76451c10-d8bd-11e9-9d8f-51e00bada37e',
+        localTimestamp: 2019-09-16T20:06:25.000Z,
+        recipient: {
+          id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+          name: 'Bot',
+          role: 'bot'
+        },
+        serviceUrl: 'http://localhost:61243'
+      }
+    },
+    stack: [
+      {
+        id: 'FlickrDialog',
+        state: {
+          dialogs: {
+            dialogStack: [
+              {
+                id: 'mainWaterfallDialog',
+                state: {
+                  options: {},
+                  values: {
+                    instanceId: 'b11f0d13-100b-9249-a382-692f32f0694b'
+                  },
+                  stepIndex: 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
+DIALOG RESULTS
+{ status: 'waiting' }
+onDialog
+TurnContext {
+  _respondedRef: { responded: true },
+  _turnState: Map {
+    Symbol(state) => {
+      state: {
+        DialogState: {
+          dialogStack: [
+            {
+              id: 'FlickrDialog',
+              state: {
+                dialogs: {
+                  dialogStack: [
+                    {
+                      id: 'mainWaterfallDialog',
+                      state: {
+                        options: {},
+                        values: {
+                          instanceId: 'b11f0d13-100b-9249-a382-692f32f0694b'
+                        },
+                        stepIndex: 1
+                      }
+                    },
+                    {
+                      id: 'whatsNextPrompt',
+                      state: {
+                        options: {
+                          prompt: "What's next?",
+                          retryPrompt: 'That was not a valid choice...',
+                          choices: [ 'More from this author...', 'New photos' ]
+                        },
+                        state: {}
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        eTag: '1'
+      },
+      hash: `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"b11f0d13-100b-9249-a382-692f32f0694b"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]}}`
+    }
+  },
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: '1',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '15686643856112jk9m4sizse' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:06:25.616Z,
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '76451c10-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:06:25.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: '1',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '156866439133252e86chjzj' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:06:31.340Z,
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '79ae5ec0-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:06:31.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+DIALOG RESULTS
+{
+  status: 'complete',
+  result: { value: 'More from this author...', index: 0, score: 1 }
+}
+onDialog
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {
+    Symbol(state) => {
+      state: { DialogState: { dialogStack: [] }, eTag: '2' },
+      hash: `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"b11f0d13-100b-9249-a382-692f32f0694b"},"stepIndex":1}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]}}`
+    }
+  },
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: '1',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '156866439133252e86chjzj' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:06:31.340Z,
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '79ae5ec0-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:06:31.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: '2',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '15686644092601ommrf6o734' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:06:49.266Z,
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '845da920-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:06:49.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+DIALOG RESULTS
+{ status: 'empty' }
+MainDialog.initialStep
+onDialog
+TurnContext {
+  _respondedRef: { responded: true },
+  _turnState: Map {
+    Symbol(state) => {
+      state: { DialogState: { dialogStack: [] }, eTag: '3' },
+      hash: '{"DialogState":{"dialogStack":[]}}'
+    }
+  },
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: '2',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '15686644092601ommrf6o734' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:06:49.266Z,
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '845da920-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:06:49.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    channelData: { clientActivityID: '1568664416482zr9obtimw3', messageBack: {} },
+    type: 'message',
+    value: { action: 'author_more', author_id: '183873140@N02' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:06:56.498Z,
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '88ad2d20-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:06:56.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+DIALOG RESULTS
+{ status: 'empty' }
+MainDialog.initialStep
+onDialog
+TurnContext {
+  _respondedRef: { responded: true },
+  _turnState: Map {
+    Symbol(state) => {
+      state: {
+        DialogState: {
+          dialogStack: [
+            {
+              id: 'FlickrDialog',
+              state: {
+                dialogs: {
+                  dialogStack: [
+                    {
+                      id: 'mainWaterfallDialog',
+                      state: {
+                        options: {},
+                        values: {
+                          instanceId: '6d787894-7642-af44-d817-8e136348fd47'
+                        },
+                        stepIndex: 0
+                      }
+                    },
+                    {
+                      id: 'whatsNextPrompt',
+                      state: {
+                        options: {
+                          prompt: "What's next?",
+                          retryPrompt: 'That was not a valid choice...',
+                          choices: [ 'More from this author...', 'New photos' ]
+                        },
+                        state: {}
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        eTag: '3'
+      },
+      hash: '{"DialogState":{"dialogStack":[]}}'
+    }
+  },
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    channelData: { clientActivityID: '1568664416482zr9obtimw3', messageBack: {} },
+    type: 'message',
+    value: { action: 'author_more', author_id: '183873140@N02' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:06:56.498Z,
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '88ad2d20-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:06:56.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: '1',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '1568664423565m9qnatmhbpf' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:07:03.579Z,
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '8ce5a6b0-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:07:03.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+MainDialog.choiceStep
+WaterfallStepContext {
+  dialogs: DialogSet {
+    dialogs: {
+      whatsNextPrompt: ChoicePrompt {
+        _telemetryClient: NullTelemetryClient {},
+        id: 'whatsNextPrompt',
+        validator: undefined,
+        style: 1,
+        defaultLocale: undefined
+      },
+      mainWaterfallDialog: WaterfallDialog {
+        _telemetryClient: NullTelemetryClient {},
+        id: 'mainWaterfallDialog',
+        steps: [
+          [Function: bound initialStep] AsyncFunction,
+          [Function: bound choiceStep] AsyncFunction
+        ]
+      }
+    },
+    dialogState: null
+  },
+  context: TurnContext {
+    _respondedRef: { responded: false },
+    _turnState: Map {
+      Symbol(state) => {
+        state: {
+          DialogState: {
+            dialogStack: [
+              {
+                id: 'FlickrDialog',
+                state: {
+                  dialogs: {
+                    dialogStack: [
+                      {
+                        id: 'mainWaterfallDialog',
+                        state: {
+                          options: {},
+                          values: {
+                            instanceId: '6d787894-7642-af44-d817-8e136348fd47'
+                          },
+                          stepIndex: 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          eTag: '4'
+        },
+        hash: `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"6d787894-7642-af44-d817-8e136348fd47"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]}}`
+      }
+    },
+    _onSendActivities: [],
+    _onUpdateActivity: [],
+    _onDeleteActivity: [],
+    _adapter: BotFrameworkAdapter {
+      middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+      settings: {
+        appId: '',
+        appPassword: '',
+        channelService: undefined,
+        openIdMetadata: undefined
+      },
+      credentials: MicrosoftAppCredentials {
+        oAuthScope: 'https://api.botframework.com/.default',
+        refreshingToken: null,
+        appId: '',
+        appPassword: '',
+        oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+        tokenCacheKey: '-cache'
+      },
+      credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+      isEmulatingOAuthCards: false,
+      turnError: [AsyncFunction]
+    },
+    _activity: {
+      text: '1',
+      textFormat: 'plain',
+      type: 'message',
+      channelData: { clientActivityID: '1568664423565m9qnatmhbpf' },
+      channelId: 'emulator',
+      from: {
+        id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+        name: 'User',
+        role: 'user'
+      },
+      locale: 'en-US',
+      timestamp: 2019-09-16T20:07:03.579Z,
+      conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+      id: '8ce5a6b0-d8bd-11e9-9d8f-51e00bada37e',
+      localTimestamp: 2019-09-16T20:07:03.000Z,
+      recipient: {
+        id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+        name: 'Bot',
+        role: 'bot'
+      },
+      serviceUrl: 'http://localhost:61243'
+    }
+  },
+  stack: [
+    {
+      id: 'mainWaterfallDialog',
+      state: {
+        options: {},
+        values: { instanceId: '6d787894-7642-af44-d817-8e136348fd47' },
+        stepIndex: 1
+      }
+    }
+  ],
+  _info: {
+    index: 1,
+    options: {},
+    reason: 'endCalled',
+    result: { value: 'More from this author...', index: 0, score: 1 },
+    values: { instanceId: '6d787894-7642-af44-d817-8e136348fd47' },
+    onNext: [AsyncFunction: onNext]
+  },
+  parent: DialogContext {
+    dialogs: DialogSet {
+      dialogs: {
+        FlickrDialog: FlickrDialog {
+          _telemetryClient: NullTelemetryClient {},
+          id: 'FlickrDialog',
+          dialogs: DialogSet {
+            dialogs: {
+              whatsNextPrompt: ChoicePrompt {
+                _telemetryClient: NullTelemetryClient {},
+                id: 'whatsNextPrompt',
+                validator: undefined,
+                style: 1,
+                defaultLocale: undefined
+              },
+              mainWaterfallDialog: WaterfallDialog {
+                _telemetryClient: NullTelemetryClient {},
+                id: 'mainWaterfallDialog',
+                steps: [
+                  [Function: bound initialStep] AsyncFunction,
+                  [Function: bound choiceStep] AsyncFunction
+                ]
+              }
+            },
+            dialogState: null
+          },
+          initialDialogId: 'mainWaterfallDialog'
+        }
+      },
+      dialogState: BotStatePropertyAccessor {
+        state: ConversationState {
+          storage: MemoryStorage {
+            memory: {
+              'emulator/conversations/6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat/': `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"6d787894-7642-af44-d817-8e136348fd47"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]},"eTag":"4"}`
+            },
+            etag: 5
+          },
+          storageKey: [Function],
+          stateKey: Symbol(state),
+          namespace: ''
+        },
+        name: 'DialogState',
+        authorId: '183873140@N02'
+      }
+    },
+    context: TurnContext {
+      _respondedRef: { responded: false },
+      _turnState: Map {
+        Symbol(state) => {
+          state: {
+            DialogState: {
+              dialogStack: [
+                {
+                  id: 'FlickrDialog',
+                  state: {
+                    dialogs: {
+                      dialogStack: [
+                        {
+                          id: 'mainWaterfallDialog',
+                          state: {
+                            options: {},
+                            values: {
+                              instanceId: '6d787894-7642-af44-d817-8e136348fd47'
+                            },
+                            stepIndex: 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            eTag: '4'
+          },
+          hash: `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"6d787894-7642-af44-d817-8e136348fd47"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]}}`
+        }
+      },
+      _onSendActivities: [],
+      _onUpdateActivity: [],
+      _onDeleteActivity: [],
+      _adapter: BotFrameworkAdapter {
+        middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+        settings: {
+          appId: '',
+          appPassword: '',
+          channelService: undefined,
+          openIdMetadata: undefined
+        },
+        credentials: MicrosoftAppCredentials {
+          oAuthScope: 'https://api.botframework.com/.default',
+          refreshingToken: null,
+          appId: '',
+          appPassword: '',
+          oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+          tokenCacheKey: '-cache'
+        },
+        credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+        isEmulatingOAuthCards: false,
+        turnError: [AsyncFunction]
+      },
+      _activity: {
+        text: '1',
+        textFormat: 'plain',
+        type: 'message',
+        channelData: { clientActivityID: '1568664423565m9qnatmhbpf' },
+        channelId: 'emulator',
+        from: {
+          id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+          name: 'User',
+          role: 'user'
+        },
+        locale: 'en-US',
+        timestamp: 2019-09-16T20:07:03.579Z,
+        conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+        id: '8ce5a6b0-d8bd-11e9-9d8f-51e00bada37e',
+        localTimestamp: 2019-09-16T20:07:03.000Z,
+        recipient: {
+          id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+          name: 'Bot',
+          role: 'bot'
+        },
+        serviceUrl: 'http://localhost:61243'
+      }
+    },
+    stack: [
+      {
+        id: 'FlickrDialog',
+        state: {
+          dialogs: {
+            dialogStack: [
+              {
+                id: 'mainWaterfallDialog',
+                state: {
+                  options: {},
+                  values: {
+                    instanceId: '6d787894-7642-af44-d817-8e136348fd47'
+                  },
+                  stepIndex: 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
+DIALOG RESULTS
+{ status: 'waiting' }
+onDialog
+TurnContext {
+  _respondedRef: { responded: true },
+  _turnState: Map {
+    Symbol(state) => {
+      state: {
+        DialogState: {
+          dialogStack: [
+            {
+              id: 'FlickrDialog',
+              state: {
+                dialogs: {
+                  dialogStack: [
+                    {
+                      id: 'mainWaterfallDialog',
+                      state: {
+                        options: {},
+                        values: {
+                          instanceId: '6d787894-7642-af44-d817-8e136348fd47'
+                        },
+                        stepIndex: 1
+                      }
+                    },
+                    {
+                      id: 'whatsNextPrompt',
+                      state: {
+                        options: {
+                          prompt: "What's next?",
+                          retryPrompt: 'That was not a valid choice...',
+                          choices: [ 'More from this author...', 'New photos' ]
+                        },
+                        state: {}
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        eTag: '4'
+      },
+      hash: `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"6d787894-7642-af44-d817-8e136348fd47"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]}}`
+    }
+  },
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: '1',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '1568664423565m9qnatmhbpf' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:07:03.579Z,
+    conversation: { id: '6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat' },
+    id: '8ce5a6b0-d8bd-11e9-9d8f-51e00bada37e',
+    localTimestamp: 2019-09-16T20:07:03.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:61243'
+  }
+}
+CONVERSATION
+CONVERSATION
+DIALOG RESULTS
+{ status: 'empty' }
+MainDialog.initialStep
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: 'fdgfg',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '1568665025994zjl02v3nt1h' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:17:06.004Z,
+    entities: [
+      {
+        requiresBotState: true,
+        supportsListening: true,
+        supportsTts: true,
+        type: 'ClientCapabilities'
+      }
+    ],
+    conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+    id: 'f3f86940-d8be-11e9-b3c4-57289505bc54',
+    localTimestamp: 2019-09-16T20:17:06.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:64892'
+  }
+}
+onDialog
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: 'fdgfg',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '1568665025994zjl02v3nt1h' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:17:06.004Z,
+    entities: [
+      {
+        requiresBotState: true,
+        supportsListening: true,
+        supportsTts: true,
+        type: 'ClientCapabilities'
+      }
+    ],
+    conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+    id: 'f3f86940-d8be-11e9-b3c4-57289505bc54',
+    localTimestamp: 2019-09-16T20:17:06.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:64892'
+  }
+}
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    channelData: { clientActivityID: '1568665028737dsdkrmiy86u', messageBack: {} },
+    type: 'message',
+    value: { action: 'author_more', author_id: '171583139@N03' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:17:08.749Z,
+    conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+    id: 'f59b43d0-d8be-11e9-b3c4-57289505bc54',
+    localTimestamp: 2019-09-16T20:17:08.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:64892'
+  }
+}
+DIALOG RESULTS
+{ status: 'empty' }
+MainDialog.initialStep
+onDialog
+TurnContext {
+  _respondedRef: { responded: true },
+  _turnState: Map {
+    Symbol(state) => {
+      state: {
+        DialogState: {
+          dialogStack: [
+            {
+              id: 'FlickrDialog',
+              state: {
+                dialogs: {
+                  dialogStack: [
+                    {
+                      id: 'mainWaterfallDialog',
+                      state: {
+                        options: {},
+                        values: {
+                          instanceId: '51c3350c-19e4-4def-1ce4-8a6befe10535'
+                        },
+                        stepIndex: 0
+                      }
+                    },
+                    {
+                      id: 'whatsNextPrompt',
+                      state: {
+                        options: {
+                          prompt: "What's next?",
+                          retryPrompt: 'That was not a valid choice...',
+                          choices: [ 'More from this author...', 'New photos' ]
+                        },
+                        state: {}
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      hash: '{}'
+    }
+  },
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    channelData: { clientActivityID: '1568665028737dsdkrmiy86u', messageBack: {} },
+    type: 'message',
+    value: { action: 'author_more', author_id: '171583139@N03' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:17:08.749Z,
+    conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+    id: 'f59b43d0-d8be-11e9-b3c4-57289505bc54',
+    localTimestamp: 2019-09-16T20:17:08.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:64892'
+  }
+}
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    channelData: { clientActivityID: '1568665032664b79j942o1zm', messageBack: {} },
+    type: 'message',
+    value: { action: 'photo_description', text: 'Photo description: ' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:17:12.679Z,
+    conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+    id: 'f7f2ef70-d8be-11e9-b3c4-57289505bc54',
+    localTimestamp: 2019-09-16T20:17:12.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:64892'
+  }
+}
+onDialog
+TurnContext {
+  _respondedRef: { responded: true },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    channelData: { clientActivityID: '1568665032664b79j942o1zm', messageBack: {} },
+    type: 'message',
+    value: { action: 'photo_description', text: 'Photo description: ' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:17:12.679Z,
+    conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+    id: 'f7f2ef70-d8be-11e9-b3c4-57289505bc54',
+    localTimestamp: 2019-09-16T20:17:12.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:64892'
+  }
+}
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    channelData: { clientActivityID: '1568665035295iehhgjrn5fg', messageBack: {} },
+    type: 'message',
+    value: { action: 'photo_description', text: 'Photo description: ' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:17:15.313Z,
+    conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+    id: 'f984da10-d8be-11e9-b3c4-57289505bc54',
+    localTimestamp: 2019-09-16T20:17:15.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:64892'
+  }
+}
+onDialog
+TurnContext {
+  _respondedRef: { responded: true },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    channelData: { clientActivityID: '1568665035295iehhgjrn5fg', messageBack: {} },
+    type: 'message',
+    value: { action: 'photo_description', text: 'Photo description: ' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:17:15.313Z,
+    conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+    id: 'f984da10-d8be-11e9-b3c4-57289505bc54',
+    localTimestamp: 2019-09-16T20:17:15.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:64892'
+  }
+}
+ON MESSAGE
+TurnContext {
+  _respondedRef: { responded: false },
+  _turnState: Map {},
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: '1',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '1568665038274h0ncpj4b7bo' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:17:18.280Z,
+    conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+    id: 'fb499480-d8be-11e9-b3c4-57289505bc54',
+    localTimestamp: 2019-09-16T20:17:18.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:64892'
+  }
+}
+MainDialog.choiceStep
+WaterfallStepContext {
+  dialogs: DialogSet {
+    dialogs: {
+      whatsNextPrompt: ChoicePrompt {
+        _telemetryClient: NullTelemetryClient {},
+        id: 'whatsNextPrompt',
+        validator: undefined,
+        style: 1,
+        defaultLocale: undefined
+      },
+      mainWaterfallDialog: WaterfallDialog {
+        _telemetryClient: NullTelemetryClient {},
+        id: 'mainWaterfallDialog',
+        steps: [
+          [Function: bound initialStep] AsyncFunction,
+          [Function: bound choiceStep] AsyncFunction
+        ]
+      }
+    },
+    dialogState: null
+  },
+  context: TurnContext {
+    _respondedRef: { responded: false },
+    _turnState: Map {
+      Symbol(state) => {
+        state: {
+          DialogState: {
+            dialogStack: [
+              {
+                id: 'FlickrDialog',
+                state: {
+                  dialogs: {
+                    dialogStack: [
+                      {
+                        id: 'mainWaterfallDialog',
+                        state: {
+                          options: {},
+                          values: {
+                            instanceId: '51c3350c-19e4-4def-1ce4-8a6befe10535'
+                          },
+                          stepIndex: 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          eTag: '6'
+        },
+        hash: `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"51c3350c-19e4-4def-1ce4-8a6befe10535"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]}}`
+      }
+    },
+    _onSendActivities: [],
+    _onUpdateActivity: [],
+    _onDeleteActivity: [],
+    _adapter: BotFrameworkAdapter {
+      middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+      settings: {
+        appId: '',
+        appPassword: '',
+        channelService: undefined,
+        openIdMetadata: undefined
+      },
+      credentials: MicrosoftAppCredentials {
+        oAuthScope: 'https://api.botframework.com/.default',
+        refreshingToken: null,
+        appId: '',
+        appPassword: '',
+        oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+        tokenCacheKey: '-cache'
+      },
+      credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+      isEmulatingOAuthCards: false,
+      turnError: [AsyncFunction]
+    },
+    _activity: {
+      text: '1',
+      textFormat: 'plain',
+      type: 'message',
+      channelData: { clientActivityID: '1568665038274h0ncpj4b7bo' },
+      channelId: 'emulator',
+      from: {
+        id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+        name: 'User',
+        role: 'user'
+      },
+      locale: 'en-US',
+      timestamp: 2019-09-16T20:17:18.280Z,
+      conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+      id: 'fb499480-d8be-11e9-b3c4-57289505bc54',
+      localTimestamp: 2019-09-16T20:17:18.000Z,
+      recipient: {
+        id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+        name: 'Bot',
+        role: 'bot'
+      },
+      serviceUrl: 'http://localhost:64892'
+    }
+  },
+  stack: [
+    {
+      id: 'mainWaterfallDialog',
+      state: {
+        options: {},
+        values: { instanceId: '51c3350c-19e4-4def-1ce4-8a6befe10535' },
+        stepIndex: 1
+      }
+    }
+  ],
+  _info: {
+    index: 1,
+    options: {},
+    reason: 'endCalled',
+    result: { value: 'More from this author...', index: 0, score: 1 },
+    values: { instanceId: '51c3350c-19e4-4def-1ce4-8a6befe10535' },
+    onNext: [AsyncFunction: onNext]
+  },
+  parent: DialogContext {
+    dialogs: DialogSet {
+      dialogs: {
+        FlickrDialog: FlickrDialog {
+          _telemetryClient: NullTelemetryClient {},
+          id: 'FlickrDialog',
+          dialogs: DialogSet {
+            dialogs: {
+              whatsNextPrompt: ChoicePrompt {
+                _telemetryClient: NullTelemetryClient {},
+                id: 'whatsNextPrompt',
+                validator: undefined,
+                style: 1,
+                defaultLocale: undefined
+              },
+              mainWaterfallDialog: WaterfallDialog {
+                _telemetryClient: NullTelemetryClient {},
+                id: 'mainWaterfallDialog',
+                steps: [
+                  [Function: bound initialStep] AsyncFunction,
+                  [Function: bound choiceStep] AsyncFunction
+                ]
+              }
+            },
+            dialogState: null
+          },
+          initialDialogId: 'mainWaterfallDialog'
+        }
+      },
+      dialogState: BotStatePropertyAccessor {
+        state: ConversationState {
+          storage: MemoryStorage {
+            memory: {
+              'emulator/conversations/6b478aa0-d8bd-11e9-945a-b5f58b931127|livechat/': `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"6d787894-7642-af44-d817-8e136348fd47"},"stepIndex":1}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]},"eTag":"5"}`,
+              'emulator/conversations/f0973ce0-d8be-11e9-b619-4761c0864533|livechat/': `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"51c3350c-19e4-4def-1ce4-8a6befe10535"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]},"eTag":"6"}`
+            },
+            etag: 7
+          },
+          storageKey: [Function],
+          stateKey: Symbol(state),
+          namespace: ''
+        },
+        name: 'DialogState',
+        authorId: '171583139@N03'
+      }
+    },
+    context: TurnContext {
+      _respondedRef: { responded: false },
+      _turnState: Map {
+        Symbol(state) => {
+          state: {
+            DialogState: {
+              dialogStack: [
+                {
+                  id: 'FlickrDialog',
+                  state: {
+                    dialogs: {
+                      dialogStack: [
+                        {
+                          id: 'mainWaterfallDialog',
+                          state: {
+                            options: {},
+                            values: {
+                              instanceId: '51c3350c-19e4-4def-1ce4-8a6befe10535'
+                            },
+                            stepIndex: 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            eTag: '6'
+          },
+          hash: `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"51c3350c-19e4-4def-1ce4-8a6befe10535"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]}}`
+        }
+      },
+      _onSendActivities: [],
+      _onUpdateActivity: [],
+      _onDeleteActivity: [],
+      _adapter: BotFrameworkAdapter {
+        middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+        settings: {
+          appId: '',
+          appPassword: '',
+          channelService: undefined,
+          openIdMetadata: undefined
+        },
+        credentials: MicrosoftAppCredentials {
+          oAuthScope: 'https://api.botframework.com/.default',
+          refreshingToken: null,
+          appId: '',
+          appPassword: '',
+          oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+          tokenCacheKey: '-cache'
+        },
+        credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+        isEmulatingOAuthCards: false,
+        turnError: [AsyncFunction]
+      },
+      _activity: {
+        text: '1',
+        textFormat: 'plain',
+        type: 'message',
+        channelData: { clientActivityID: '1568665038274h0ncpj4b7bo' },
+        channelId: 'emulator',
+        from: {
+          id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+          name: 'User',
+          role: 'user'
+        },
+        locale: 'en-US',
+        timestamp: 2019-09-16T20:17:18.280Z,
+        conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+        id: 'fb499480-d8be-11e9-b3c4-57289505bc54',
+        localTimestamp: 2019-09-16T20:17:18.000Z,
+        recipient: {
+          id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+          name: 'Bot',
+          role: 'bot'
+        },
+        serviceUrl: 'http://localhost:64892'
+      }
+    },
+    stack: [
+      {
+        id: 'FlickrDialog',
+        state: {
+          dialogs: {
+            dialogStack: [
+              {
+                id: 'mainWaterfallDialog',
+                state: {
+                  options: {},
+                  values: {
+                    instanceId: '51c3350c-19e4-4def-1ce4-8a6befe10535'
+                  },
+                  stepIndex: 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
+DIALOG RESULTS
+{ status: 'waiting' }
+onDialog
+TurnContext {
+  _respondedRef: { responded: true },
+  _turnState: Map {
+    Symbol(state) => {
+      state: {
+        DialogState: {
+          dialogStack: [
+            {
+              id: 'FlickrDialog',
+              state: {
+                dialogs: {
+                  dialogStack: [
+                    {
+                      id: 'mainWaterfallDialog',
+                      state: {
+                        options: {},
+                        values: {
+                          instanceId: '51c3350c-19e4-4def-1ce4-8a6befe10535'
+                        },
+                        stepIndex: 1
+                      }
+                    },
+                    {
+                      id: 'whatsNextPrompt',
+                      state: {
+                        options: {
+                          prompt: "What's next?",
+                          retryPrompt: 'That was not a valid choice...',
+                          choices: [ 'More from this author...', 'New photos' ]
+                        },
+                        state: {}
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        eTag: '6'
+      },
+      hash: `{"DialogState":{"dialogStack":[{"id":"FlickrDialog","state":{"dialogs":{"dialogStack":[{"id":"mainWaterfallDialog","state":{"options":{},"values":{"instanceId":"51c3350c-19e4-4def-1ce4-8a6befe10535"},"stepIndex":0}},{"id":"whatsNextPrompt","state":{"options":{"prompt":"What's next?","retryPrompt":"That was not a valid choice...","choices":["More from this author...","New photos"]},"state":{}}}]}}}]}}`
+    }
+  },
+  _onSendActivities: [],
+  _onUpdateActivity: [],
+  _onDeleteActivity: [],
+  _adapter: BotFrameworkAdapter {
+    middleware: MiddlewareSet { middleware: [ [AsyncFunction] ] },
+    settings: {
+      appId: '',
+      appPassword: '',
+      channelService: undefined,
+      openIdMetadata: undefined
+    },
+    credentials: MicrosoftAppCredentials {
+      oAuthScope: 'https://api.botframework.com/.default',
+      refreshingToken: null,
+      appId: '',
+      appPassword: '',
+      oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com/oauth2/v2.0/token',
+      tokenCacheKey: '-cache'
+    },
+    credentialsProvider: SimpleCredentialProvider { appId: '', appPassword: '' },
+    isEmulatingOAuthCards: false,
+    turnError: [AsyncFunction]
+  },
+  _activity: {
+    text: '1',
+    textFormat: 'plain',
+    type: 'message',
+    channelData: { clientActivityID: '1568665038274h0ncpj4b7bo' },
+    channelId: 'emulator',
+    from: {
+      id: '524330c2-3003-4c80-87bc-ee13e53db8fe',
+      name: 'User',
+      role: 'user'
+    },
+    locale: 'en-US',
+    timestamp: 2019-09-16T20:17:18.280Z,
+    conversation: { id: 'f0973ce0-d8be-11e9-b619-4761c0864533|livechat' },
+    id: 'fb499480-d8be-11e9-b3c4-57289505bc54',
+    localTimestamp: 2019-09-16T20:17:18.000Z,
+    recipient: {
+      id: '71cbf980-d71c-11e9-945a-b5f58b931127',
+      name: 'Bot',
+      role: 'bot'
+    },
+    serviceUrl: 'http://localhost:64892'
+  }
+}
+Terminate batch job (Y/N)? 
